@@ -1,5 +1,5 @@
 import './App.css';
-import logosmo from './imagenes/logo1Web.webp';
+import logosmo from './imagenes/logo_whatsap_250px_.webp';
 import ListaDeTareas from './componentes/ListaDeTareas';
 
 
