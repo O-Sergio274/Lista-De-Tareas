@@ -1,6 +1,9 @@
 import './App.css';
-import logosmo from './imagenes/logo1Web.webp';
-import ListaDeTareas from './componentes/ListaDeTareas';
+import logosmo from './imagenes/logo_whatsap_250px_.webp';
+import React, { Suspense, lazy } from 'react';
+
+// Carga diferida del componente
+const ListaDeTareas = lazy(() => import('./componentes/ListaDeTareas'));
 
 
 function AppTareas() {
@@ -11,7 +14,9 @@ function AppTareas() {
       </div>
       <div className='tareas-lista-principal'>
         <h1>Mis Tareas</h1>
-        <ListaDeTareas />
+        <Suspense fallback={<div>Cargando tareas...</div>}>
+          <ListaDeTareas />
+        </Suspense>
       </div>
     </div>
   );
